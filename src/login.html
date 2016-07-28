@@ -1,7 +1,8 @@
 <template>
-  <div show.bind="!loginFlag" id="login-page" class="row">
+  <require from="./loader.html"></require>
+  <div id="login-page" class="row">
     <div class="col s12 z-depth-6 card-panel">
-      <form class="login-form">
+      <form class="login-form" submit.trigger="submit()">
         <div class="row">
           <div class="input-field col s12 center">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScWPFLtdAg8m7LEypagt9xytBWE3VDHby4j6B-KoqzG9zLawc5Rw" alt="" class="responsive-img valign profile-image-login" style="width: 263px;">
@@ -31,29 +32,19 @@
         <div class="row">
           <div class="input-field col s12">
             <!-- <a href="/#/welcome" class="btn waves-effect waves-light col s12">Login</a> -->
-            <button type="submit" submit.trigger="submit()" class="btn waves-effect waves-light col s12">Login</button>
+            <button type="submit" class="btn waves-effect waves-light col s12">Login</button>
           </div>
         </div>
         <div class="row">
-          <div class="input-field col s6 m6 l6">
+          <!-- <div class="input-field col s6 m6 l6">
             <p class="margin medium-small"><a href="">Register Now!</a></p>
-          </div>
-          <div class="input-field col s6 m6 l6">
-            <p class="margin right-align medium-small"><a href="">Forgot password?</a></p>
+          </div> -->
+          <div class="input-field col s12 m12 l12">
+            <p class="margin center-align medium-small"><a href="">Forgot password?</a></p>
           </div>
         </div>
       </form>
     </div>
   </div>
-  <div show.bind="loginFlag" class="preloader-wrapper big active">
-    <div class="spinner-layer spinner-red-only">
-      <div class="circle-clipper left">
-        <div class="circle"></div>
-      </div><div class="gap-patch">
-        <div class="circle"></div>
-      </div><div class="circle-clipper right">
-        <div class="circle"></div>
-      </div>
-    </div>
-  </div>
+  <loader show.bind="loginFlag" class="loader-css"></loader>
 </template>

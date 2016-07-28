@@ -14,11 +14,15 @@ export class Login {
 
   submit() {
     this.loginFlag = true;
-    if(this.userName==='admin' && this.password==='admin'){
-      this.theRouter.navigate("dashboard");
-      this.loginFlag = false;
-    }else {
-      this.loginFlag = false;
-    }
+    var interval = setInterval(()=>{
+      clearInterval(interval);
+      if(this.userName==='admin' && this.password==='admin'){
+        this.theRouter.navigate("dashboard");
+        this.loginFlag = false;
+      }else {
+        this.loginFlag = false;
+      }
+
+    },1000);
   }
 }

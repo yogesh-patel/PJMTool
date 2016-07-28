@@ -1,0 +1,12 @@
+.loader-css{
+  background: #222222;
+  position: fixed;
+  text-align: center;
+  top: 0px;
+  z-index: 1000;
+  opacity: 0.5;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  line-height: 608px;
+}
