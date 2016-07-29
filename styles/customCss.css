@@ -10,3 +10,24 @@
   left: 0;
   line-height: 608px;
 }
+
+.font-bold {
+  font-weight: bold;
+}
+
+#fixedheader {
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	color:#CCC;
+	background:#245AD8;
+	padding:20px;
+  height: 50px;
+  text-align: right;
+  padding-top: 10px;
+}
+.menu-height{
+  line-height: 48px !important;
+  height: 48px !important;
+}
