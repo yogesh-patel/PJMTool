@@ -1,3 +1,16 @@
 <template>
-<div><h2>Mercatus Analytics Dashboard</h2></div>
+  <require from="./left-panel.html"></require>
+  <require from="./header.html"></require>
+
+  <section>
+    <header></header>
+    <div>
+      <div class="col-md-2">
+        <left-panel router.bind="router"></left-panel>
+      </div>
+      <div class="col-md-10" style="padding: 0">
+        <router-view></router-view>
+      </div>
+    </div>
+  </section>
 </template>

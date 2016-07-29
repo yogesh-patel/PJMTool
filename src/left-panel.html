@@ -1,0 +1,16 @@
+<template bindable="router">
+    <ul id="slide-out" class="side-nav fixed font-bold">
+      <li><div class="userView">
+        <h4>MERCATUS</h4>
+      </div></li>
+      <li style="padding-bottom: 15px;"><div class="divider"></div></li>
+      <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
+        <a class="menu-height" href.bind="row.href">${row.title}</a>
+      </li>
+      <!-- <li class="${isActive ? 'active' : ''}"><a href.bind="row.href" class="menu-height"><i class="tiny material-icons">dashboard</i>&nbsp&nbsp&nbspDashboard</a></li>
+      <li class="${isActive ? 'active' : ''}"><a href.bind="row.href" class="menu-height"><i class="tiny material-icons">receipt</i>&nbsp&nbsp&nbspDocuments</a></li>
+      <li class="${isActive ? 'active' : ''}"><a href="#!" class="menu-height"><i class="tiny material-icons">settings</i>&nbsp&nbsp&nbspSettings</a></li>
+      <li class="${isActive ? 'active' : ''}"><a href="#!" class="menu-height"><i class="tiny material-icons">lock</i>&nbsp&nbsp&nbspLogout</a></li> -->
+    </ul>
+    <!-- <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a> -->
+</template>
