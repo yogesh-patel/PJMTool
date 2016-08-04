@@ -17,7 +17,7 @@ export class dashboardTab {
     }
 
     $(".datepicker").datepicker("setDate", new Date());
-
+    
     // $(".datepicker").datepicker({
     //     setDate : new Date(),
     //     autoclose: true
@@ -62,6 +62,14 @@ export class dashboardTab {
       }
       this.loginFlag = false;
     },1000);
+  }
+
+  highestMWDivFullScreen(){
+     $('#highestMWDiv').toggleClass('fullscreen');
+  }
+
+  highestCountDivFullScreen(){
+     $('#highestCountDiv').toggleClass('fullscreen');
   }
 
 }

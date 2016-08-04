@@ -170,3 +170,23 @@ th {
 .datepicker{
   left: 750px !important;
 }
+
+#highestMWDiv.fullscreen{
+    z-index: 9999;
+    width: 82%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 268px;
+    background-color:#eceff1
+ }
+
+ #highestCountDiv.fullscreen{
+     z-index: 9999;
+     width: 82%;
+     height: 100%;
+     position: fixed;
+     top: 0;
+     left: 240px;
+     background-color:#eceff1
+  }
