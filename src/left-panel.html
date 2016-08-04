@@ -1,16 +1,24 @@
-<template bindable="router">
-    <ul id="slide-out" class="side-nav fixed font-bold">
-      <li><div class="userView">
-        <h4>MERCATUS</h4>
-      </div></li>
+  <template bindable="router">
+    <ul id="Navigation" class="side-nav fixed font-bold">
+      <li>
+        <!-- <div class="userView">
+         <h4>MERCATUS</h4>
+        </div> -->
+      <div class="userView" style="padding: 10px;">
+        <img class="background" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScWPFLtdAg8m7LEypagt9xytBWE3VDHby4j6B-KoqzG9zLawc5Rw" style="height: 64px;">
+        <!-- <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
+        <a href="#!name"><span class="white-text name">John Doe</span></a>
+        <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a> -->
+      </div>
+      </li>
       <li style="padding-bottom: 15px;"><div class="divider"></div></li>
       <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
-        <a class="menu-height" href.bind="row.href">${row.title}</a>
+        <a class="menu-height" href.bind="row.href" style="text-transform: uppercase;font-size: 14px;font-family: sans-serif;"><i class="tiny material-icons">${row.title}</i>&nbsp&nbsp&nbsp${row.title==='receipt' ? 'Documents' : row.title}</a>
       </li>
-      <!-- <li class="${isActive ? 'active' : ''}"><a href.bind="row.href" class="menu-height"><i class="tiny material-icons">dashboard</i>&nbsp&nbsp&nbspDashboard</a></li>
-      <li class="${isActive ? 'active' : ''}"><a href.bind="row.href" class="menu-height"><i class="tiny material-icons">receipt</i>&nbsp&nbsp&nbspDocuments</a></li>
-      <li class="${isActive ? 'active' : ''}"><a href="#!" class="menu-height"><i class="tiny material-icons">settings</i>&nbsp&nbsp&nbspSettings</a></li>
-      <li class="${isActive ? 'active' : ''}"><a href="#!" class="menu-height"><i class="tiny material-icons">lock</i>&nbsp&nbsp&nbspLogout</a></li> -->
+      <!-- <li><a href="#/dashboard/dashboardTab" class="menu-height"><i class="tiny material-icons">dashboard</i>&nbsp&nbsp&nbspDashboard</a></li>
+      <li><a href="#/dashboard/documents" class="menu-height"><i class="tiny material-icons">receipt</i>&nbsp&nbsp&nbspDocuments</a></li>
+      <li><a href="#/dashboard/settings" class="menu-height"><i class="tiny material-icons">settings</i>&nbsp&nbsp&nbspSettings</a></li>
+      <li><a href="#/dashboard/logout" class="menu-height"><i class="tiny material-icons">lock</i>&nbsp&nbsp&nbspLogout</a></li> -->
     </ul>
     <!-- <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a> -->
 </template>
