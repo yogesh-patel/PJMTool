@@ -1,16 +1,25 @@
 <template>
+  <!-- <require from="bootstrap/css/bootstrap.css"></require> -->
   <require from="./left-panel.html"></require>
   <require from="./header.html"></require>
 
-  <section>
     <header></header>
-    <div>
-      <div class="col-md-2">
+    <!-- <div class="row">
+      <div class="col m2">
         <left-panel router.bind="router"></left-panel>
       </div>
-      <div class="col-md-10" style="padding: 0">
+      <div class="col m10" style="padding: 0">
+            <router-view></router-view>
+      </div>
+    </div> -->
+
+    <div class="row">
+      <div class="col m2">
+        <left-panel router.bind="router"></left-panel>
+      </div>
+
+      <div class="col m10" style="position: absolute;left: 241px;top: 60px;">
         <router-view></router-view>
       </div>
     </div>
-  </section>
 </template>

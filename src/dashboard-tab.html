@@ -1,3 +1,102 @@
 <template>
-  <h2>Dashboard</h2>
+  <require from="./loader.html"></require>
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="card-panel padding-13">
+        <span class="gray-font">Total MW</span>
+        <h5>${pageData.totalMW}</h5>
+      </div>
+    </div>
+    <div class="col s12 m3">
+      <div class="card-panel padding-13">
+        <span class="gray-font">Total Projects</span>
+        <h5>${pageData.totalProject}</h5>
+      </div>
+    </div>
+    <div class="col s12 m2">
+      <bootstrap-datepicker value.bind="'mm-dd-yyyy'" dp-options.bind="dpOptions" changedate.delegate="mychangedatefunction($event)"></bootstrap-datepicker><i class="small material-icons" style="position: relative;top: -52px;left: 124px;z-index: -1;">perm_contact_calendar</i>
+    </div>
+  </div>
+  <div class="row" style="padding:0 40px;">
+    <div id="highestMWDiv" class="col s12 m6 table-border" style="margin-left: -29px; margin-right: 20px;">
+      <table class="bordered">
+        <thead style="background-color:#c6c6c6">
+          <tr>
+              <th colspan="2">Top 5 States by Highest MW</th>
+              <th style="float: right;">
+                <a href="javascript:void(0)" click.trigger="highestMWDivFullScreen()">
+                  <i class="material-icons">view_module</i>
+                </a>
+                <a href="javascript:void(0)" click.trigger="mychangedatefunction()">
+                  <i class="material-icons">refresh</i>
+                </a>
+                <a href="javascript:void(0)">
+                  <i class="material-icons">more_vert</i>
+                </a>
+              </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr repeat.for="row of pageData.highestMW">
+            <td style="padding: 0 15px;">
+              <div class="loader">
+                <div class="loader-bg">
+                <div class="text">${row.MWPercent}%</div>
+                </div>
+                <div class="spiner-holder-one animate-0-25-a">
+                <div id="animate-0-25-b_${row.state}" class="spiner-holder-two animate-0-25-b">
+                    <div class="loader-spiner" style=""></div>
+                </div>
+                </div>
+                <div class="spiner-holder-one animate-25-50-a">
+                <div id="animate-25-50-b_${row.state}" class="spiner-holder-two animate-25-50-b">
+                    <div class="loader-spiner"></div>
+                </div>
+                </div>
+                <div class="spiner-holder-one animate-50-75-a">
+                <div id="animate-50-75-b_${row.state}" class="spiner-holder-two animate-50-75-b">
+                    <div class="loader-spiner"></div>
+                </div>
+                </div>
+                <div class="spiner-holder-one animate-75-100-a">
+                <div class="spiner-holder-two animate-75-100-b">
+                    <div class="loader-spiner"></div>
+                </div>
+                </div>
+            </div>
+            </td>
+            <td style="padding: 0 15px;">${row.state}</td>
+            <td>${row.MW} MW</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="highestCountDiv" class="col s12 m6 table-border">
+      <table class="bordered">
+        <thead style="background-color:#c6c6c6">
+          <tr>
+              <th>Top 5 States by Highest Count</th>
+              <th style="float: right;">
+                <a href="javascript:void(0)" click.trigger="highestCountDivFullScreen()">
+                  <i class="material-icons">view_module</i>
+                </a>
+                <a href="javascript:void(0)" click.trigger="mychangedatefunction()">
+                  <i class="material-icons">refresh</i>
+                </a>
+                <a href="javascript:void(0)">
+                  <i class=" material-icons">more_vert</i>
+                </a>
+              </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr repeat.for="row of pageData.highestCount">
+            <td style="padding: 15px;">${row.state}</td>
+            <td>${row.projectCount} Projects</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <loader show.bind="loginFlag" class="loader-css"></loader>
 </template>

@@ -8,6 +8,7 @@ System.config({
   },
   map: {
     "aurelia-animator-css": "npm:aurelia-animator-css@1.0.0-rc.1.0.0",
+    "aurelia-bootstrap-datepicker": "npm:aurelia-bootstrap-datepicker@0.0.8",
     "aurelia-bootstrapper": "npm:aurelia-bootstrapper@1.0.0-rc.1.0.1",
     "aurelia-fetch-client": "npm:aurelia-fetch-client@1.0.0-rc.1.0.0",
     "aurelia-framework": "npm:aurelia-framework@1.0.0-rc.1.0.1",
@@ -35,7 +36,7 @@ System.config({
       "buffer": "npm:buffer@3.6.0"
     },
     "github:jspm/nodelibs-process@0.1.2": {
-      "process": "npm:process@0.11.6"
+      "process": "npm:process@0.11.7"
     },
     "github:jspm/nodelibs-util@0.1.0": {
       "util": "npm:util@0.10.3"
@@ -68,6 +69,9 @@ System.config({
       "aurelia-metadata": "npm:aurelia-metadata@1.0.0-rc.1.0.1",
       "aurelia-pal": "npm:aurelia-pal@1.0.0-rc.1.0.0",
       "aurelia-task-queue": "npm:aurelia-task-queue@1.0.0-rc.1.0.0"
+    },
+    "npm:aurelia-bootstrap-datepicker@0.0.8": {
+      "bootstrap-datepicker": "npm:bootstrap-datepicker@1.6.2"
     },
     "npm:aurelia-bootstrapper@1.0.0-rc.1.0.1": {
       "aurelia-event-aggregator": "npm:aurelia-event-aggregator@1.0.0-rc.1.0.0",
@@ -209,6 +213,11 @@ System.config({
     "npm:bluebird@3.4.1": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
+    "npm:bootstrap-datepicker@1.6.2": {
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "jquery": "npm:jquery@2.2.4",
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
     "npm:buffer@3.6.0": {
       "base64-js": "npm:base64-js@0.0.8",
       "child_process": "github:jspm/nodelibs-child_process@0.1.0",
@@ -227,7 +236,7 @@ System.config({
       "css": "github:systemjs/plugin-css@0.1.25",
       "jquery": "github:components/jquery@3.1.0"
     },
-    "npm:process@0.11.6": {
+    "npm:process@0.11.7": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "vm": "github:jspm/nodelibs-vm@0.1.0"
